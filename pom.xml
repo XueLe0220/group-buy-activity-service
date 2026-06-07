@@ -35,6 +35,8 @@
         <guava.version>32.1.3-jre</guava.version>
         <dubbo.version>3.3.0</dubbo.version>
         <nacos-config.version>2023.0.3.2</nacos-config.version>
+        <group-buy-common.version>1.0-SNAPSHOT</group-buy-common.version>
+        <group-buy-tag-service.version>1.0-SNAPSHOT</group-buy-tag-service.version>
     </properties>
 
     <dependencyManagement>
@@ -84,13 +86,13 @@
             <dependency>
                 <groupId>cn.xuele</groupId>
                 <artifactId>group-buy-common-types</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${group-buy-common.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>cn.xuele</groupId>
                 <artifactId>group-buy-tag-api</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${group-buy-tag-service.version}</version>
             </dependency>
 
             <dependency>

@@ -28,4 +28,13 @@ public enum DiscountTypeEnum {
     /** 类型描述。 */
     private String info;
 
+    public static DiscountTypeEnum valueOfCode(Integer code) {
+        for (DiscountTypeEnum discountType : values()) {
+            if (discountType.getCode().equals(code)) {
+                return discountType;
+            }
+        }
+        throw new IllegalArgumentException("Unsupported discount type code: " + code);
+    }
+
 }

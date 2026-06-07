@@ -24,10 +24,13 @@ public interface IActivityRepository {
     /**
      * 查询商品价格快照。
      *
-     * @param goodsId 商品ID
+     * @param goodsId   商品ID
+     * @param source    来源
+     * @param channel   渠道
+     *
      * @return 商品价格快照
      */
-    SkuVO querySkuByGoodsId(String goodsId);
+    SkuVO querySku(String goodsId, String source, String channel);
 
     /**
      * 查询商品与活动的绑定关系。
