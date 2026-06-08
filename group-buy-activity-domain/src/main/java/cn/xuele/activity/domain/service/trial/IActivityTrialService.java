@@ -4,20 +4,19 @@ import cn.xuele.activity.domain.model.entity.MarketProductEntity;
 import cn.xuele.activity.domain.model.entity.TrialBalanceEntity;
 
 /**
- * 活动试算领域服务。
+ * 活动试算领域服务接口。
  *
  * @author XueLe
  * @version 1.0.0
- * @since 2026/06/05 17:27
+ * @since 2026/06/08 16:46
  */
 public interface IActivityTrialService {
 
     /**
-     * 计算用户在指定商品和渠道下的活动试算结果。
+     * 执行活动营销试算。
      *
-     * @param marketProductEntity 试算请求
+     * @param request 试算请求
      * @return 试算结果
      */
-    TrialBalanceEntity trial(MarketProductEntity marketProductEntity);
-
+    TrialBalanceEntity marketTrial(MarketProductEntity request) throws Exception;
 }

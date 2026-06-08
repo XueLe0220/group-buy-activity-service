@@ -91,6 +91,12 @@
 
             <dependency>
                 <groupId>cn.xuele</groupId>
+                <artifactId>group-buy-common-design</artifactId>
+                <version>${group-buy-common.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.xuele</groupId>
                 <artifactId>group-buy-tag-api</artifactId>
                 <version>${group-buy-tag-service.version}</version>
             </dependency>

@@ -1,6 +1,5 @@
 package cn.xuele.activity.domain.service.discount;
 
-import cn.xuele.activity.domain.model.valobj.DiscountTypeEnum;
 import cn.xuele.activity.domain.model.valobj.GroupBuyActivityDiscountVO;
 
 import java.math.BigDecimal;
@@ -26,12 +25,8 @@ public abstract class AbstractDiscountCalculateService implements IDiscountCalcu
     public BigDecimal calculate(BigDecimal originalPrice,
                                 GroupBuyActivityDiscountVO.GroupBuyDiscount groupBuyDiscount, boolean isUsable) {
 
-        DiscountTypeEnum discountType = groupBuyDiscount.getDiscountType();
-
-        if (DiscountTypeEnum.TAG.equals(discountType)) {
-            if (!isUsable) {
-                return originalPrice;
-            }
+        if (!isUsable) {
+            return originalPrice;
         }
 
         return doCalculate(originalPrice, groupBuyDiscount);
