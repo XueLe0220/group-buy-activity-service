@@ -1,24 +1,22 @@
-package cn.xuele.activity.domain.service.trial;
+package cn.xuele.activity.domain.service;
 
 import cn.xuele.activity.domain.model.entity.MarketProductEntity;
 import cn.xuele.activity.domain.model.entity.TrialBalanceEntity;
 import cn.xuele.activity.domain.service.trial.engine.IActivityTrialRuleEngine;
 
 /**
- * 活动试算领域服务。
- * <p>
- * 对外收敛活动试算能力，内部委托规则树入口完成具体流程。
+ * 活动领域服务。
  *
  * @author XueLe
  * @version 1.0.0
  * @since 2026/06/08 16:45
  */
-public class ActivityTrialService implements IActivityTrialService {
+public class ActivityService implements IActivityService {
 
     /** 活动试算规则树入口。 */
     private final IActivityTrialRuleEngine activityTrialRuleEngine;
 
-    public ActivityTrialService(IActivityTrialRuleEngine activityTrialRuleEngine) {
+    public ActivityService(IActivityTrialRuleEngine activityTrialRuleEngine) {
         this.activityTrialRuleEngine = activityTrialRuleEngine;
     }
 

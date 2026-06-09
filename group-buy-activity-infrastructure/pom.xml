@@ -29,6 +29,11 @@
         </dependency>
 
         <dependency>
+            <groupId>cn.xuele</groupId>
+            <artifactId>group-buy-common-types</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
         </dependency>
