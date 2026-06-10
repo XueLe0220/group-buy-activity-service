@@ -58,12 +58,15 @@ public class ActivityTrialController {
             TrialBalanceEntity trialBalanceEntity = activityService.marketTrial(requestEntity);
 
             ActivityTrialResponseDTO response = ActivityTrialResponseDTO.builder()
+                    .activityId(trialBalanceEntity.getActivityId())
+                    .activityName(trialBalanceEntity.getActivityName())
                     .goodsId(trialBalanceEntity.getGoodsId())
                     .goodsName(trialBalanceEntity.getGoodsName())
                     .originalPrice(trialBalanceEntity.getOriginalPrice())
                     .deductionPrice(trialBalanceEntity.getDeductionPrice())
                     .payPrice(trialBalanceEntity.getPayPrice())
                     .targetCount(trialBalanceEntity.getTargetCount())
+                    .validTime(trialBalanceEntity.getValidTime())
                     .startTime(trialBalanceEntity.getStartTime())
                     .endTime(trialBalanceEntity.getEndTime())
                     .visible(trialBalanceEntity.getIsVisible())

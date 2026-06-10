@@ -26,6 +26,12 @@ public class ActivityTrialResponseDTO implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 
+    /** 活动ID。 */
+    private Long activityId;
+
+    /** 活动名称。 */
+    private String activityName;
+
     /** 商品ID。 */
     private String goodsId;
 
@@ -43,6 +49,9 @@ public class ActivityTrialResponseDTO implements Serializable {
 
     /** 成团目标人数。 */
     private Integer targetCount;
+
+    /** 拼团有效时间，单位分钟。 */
+    private Integer validTime;
 
     /** 活动开始时间。 */
     private LocalDateTime startTime;

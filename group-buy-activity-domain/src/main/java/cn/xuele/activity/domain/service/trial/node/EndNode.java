@@ -27,12 +27,15 @@ public class EndNode extends AbstractActivityTrialSupport {
         GroupBuyActivityDiscountVO activityDiscount = dynamicContext.getActivityDiscount();
 
         return TrialBalanceEntity.builder()
+                .activityId(activityDiscount.getActivityId())
+                .activityName(activityDiscount.getActivityName())
                 .goodsId(sku.getGoodsId())
                 .goodsName(sku.getGoodsName())
                 .originalPrice(sku.getOriginalPrice())
                 .deductionPrice(dynamicContext.getDeductionPrice())
                 .payPrice(dynamicContext.getPayPrice())
                 .targetCount(activityDiscount.getTarget())
+                .validTime(activityDiscount.getValidTime())
                 .startTime(activityDiscount.getStartTime())
                 .endTime(activityDiscount.getEndTime())
                 .isVisible(dynamicContext.getVisible())
