@@ -49,6 +49,9 @@ public class TrialBalanceEntity {
     /** 拼团有效时间，单位分钟。 */
     private Integer validTime;
 
+    /** 单人参与次数限制。 */
+    private Integer takeLimitCount;
+
     /** 活动开始时间。 */
     private LocalDateTime startTime;
 

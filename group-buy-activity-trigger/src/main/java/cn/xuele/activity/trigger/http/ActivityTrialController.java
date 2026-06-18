@@ -51,6 +51,7 @@ public class ActivityTrialController {
             MarketProductEntity requestEntity = MarketProductEntity.builder()
                     .userId(userId)
                     .goodsId(goodsId)
+                    .activityId(request.getActivityId())
                     .source(source)
                     .channel(channel)
                     .build();
@@ -67,6 +68,7 @@ public class ActivityTrialController {
                     .payPrice(trialBalanceEntity.getPayPrice())
                     .targetCount(trialBalanceEntity.getTargetCount())
                     .validTime(trialBalanceEntity.getValidTime())
+                    .takeLimitCount(trialBalanceEntity.getTakeLimitCount())
                     .startTime(trialBalanceEntity.getStartTime())
                     .endTime(trialBalanceEntity.getEndTime())
                     .visible(trialBalanceEntity.getIsVisible())

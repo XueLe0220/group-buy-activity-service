@@ -36,6 +36,7 @@ public class EndNode extends AbstractActivityTrialSupport {
                 .payPrice(dynamicContext.getPayPrice())
                 .targetCount(activityDiscount.getTarget())
                 .validTime(activityDiscount.getValidTime())
+                .takeLimitCount(activityDiscount.getTakeLimitCount())
                 .startTime(activityDiscount.getStartTime())
                 .endTime(activityDiscount.getEndTime())
                 .isVisible(dynamicContext.getVisible())

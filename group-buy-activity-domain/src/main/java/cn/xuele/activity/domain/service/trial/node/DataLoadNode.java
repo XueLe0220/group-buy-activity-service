@@ -44,6 +44,10 @@ public class DataLoadNode extends AbstractActivityTrialSupport {
         if (skuActivity == null || skuActivity.getActivityId() == null) {
             throw new AppException(ResponseCode.NO_ACTIVITY_MARKET_CONFIG);
         }
+        if (requestParameter.getActivityId() != null
+                && !requestParameter.getActivityId().equals(skuActivity.getActivityId())) {
+            throw new AppException(ResponseCode.NO_ACTIVITY_MARKET_CONFIG);
+        }
 
         // 根据活动ID查活动折扣聚合信息
         GroupBuyActivityDiscountVO activityDiscount = activityRepository.queryValidActivityDiscount(

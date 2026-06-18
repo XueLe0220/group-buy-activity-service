@@ -30,6 +30,9 @@ public class ActivityTrialRequestDTO implements Serializable {
     /** 商品ID。 */
     private String goodsId;
 
+    /** 用户期望参与的活动ID；为空时按商品当前绑定活动试算。 */
+    private Long activityId;
+
     /** 来源。 */
     private String source;
 
