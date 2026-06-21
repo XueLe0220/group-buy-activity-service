@@ -18,13 +18,13 @@ public class FixedPriceDiscountCalculator extends AbstractDiscountCalculateServi
     @Override
     protected BigDecimal doCalculate(BigDecimal originalPrice,
                                      GroupBuyActivityDiscountVO.GroupBuyDiscount groupBuyDiscount) {
-        BigDecimal payPrice = new BigDecimal(groupBuyDiscount.getMarketExpr().trim());
+        BigDecimal payableAmount = new BigDecimal(groupBuyDiscount.getMarketExpr().trim());
 
-        if (payPrice.compareTo(BigDecimal.ZERO) <= 0) {
+        if (payableAmount.compareTo(BigDecimal.ZERO) <= 0) {
             return new BigDecimal("0.01");
         }
 
-        return payPrice;
+        return payableAmount;
     }
 
     @Override

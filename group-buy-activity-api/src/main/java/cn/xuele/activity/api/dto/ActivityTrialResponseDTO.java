@@ -44,8 +44,8 @@ public class ActivityTrialResponseDTO implements Serializable {
     /** 优惠金额。 */
     private BigDecimal deductionPrice;
 
-    /** 试算支付价。 */
-    private BigDecimal payPrice;
+    /** 试算应付金额。 */
+    private BigDecimal payableAmount;
 
     /** 成团目标人数。 */
     private Integer targetCount;

@@ -46,6 +46,6 @@ public class ActivityTrialContext {
     /** 优惠金额。 */
     private BigDecimal deductionPrice;
 
-    /** 最终支付金额。 */
-    private BigDecimal payPrice;
+    /** 最终应付金额。 */
+    private BigDecimal payableAmount;
 }

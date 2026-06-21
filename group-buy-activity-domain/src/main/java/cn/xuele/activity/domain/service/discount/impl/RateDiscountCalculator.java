@@ -20,13 +20,13 @@ public class RateDiscountCalculator extends AbstractDiscountCalculateService {
     protected BigDecimal doCalculate(BigDecimal originalPrice,
                                      GroupBuyActivityDiscountVO.GroupBuyDiscount groupBuyDiscount) {
         BigDecimal discountRate = new BigDecimal(groupBuyDiscount.getMarketExpr().trim());
-        BigDecimal payPrice = originalPrice.multiply(discountRate).setScale(2, RoundingMode.HALF_UP);
+        BigDecimal payableAmount = originalPrice.multiply(discountRate).setScale(2, RoundingMode.HALF_UP);
 
-        if (payPrice.compareTo(BigDecimal.ZERO) <= 0) {
+        if (payableAmount.compareTo(BigDecimal.ZERO) <= 0) {
             return new BigDecimal("0.01");
         }
 
-        return payPrice;
+        return payableAmount;
     }
 
     @Override

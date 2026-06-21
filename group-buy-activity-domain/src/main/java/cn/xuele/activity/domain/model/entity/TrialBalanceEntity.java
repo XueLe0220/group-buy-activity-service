@@ -40,8 +40,8 @@ public class TrialBalanceEntity {
     /** 优惠金额。 */
     private BigDecimal deductionPrice;
 
-    /** 支付价。 */
-    private BigDecimal payPrice;
+    /** 应付金额。 */
+    private BigDecimal payableAmount;
 
     /** 成团目标人数。 */
     private Integer targetCount;

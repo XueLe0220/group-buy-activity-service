@@ -49,11 +49,11 @@ public class MarketNode extends AbstractActivityTrialSupport {
             throw new AppException(ResponseCode.NO_DISCOUNT_CALCULATOR);
         }
 
-        BigDecimal payPrice = discountCalculateService.calculate(
+        BigDecimal payableAmount = discountCalculateService.calculate(
                 sku.getOriginalPrice(), discount, Boolean.TRUE.equals(dynamicContext.getDiscountEligible()));
-        BigDecimal deductionPrice = sku.getOriginalPrice().subtract(payPrice);
+        BigDecimal deductionPrice = sku.getOriginalPrice().subtract(payableAmount);
 
-        dynamicContext.setPayPrice(payPrice);
+        dynamicContext.setPayableAmount(payableAmount);
         dynamicContext.setDeductionPrice(deductionPrice);
 
         return router(requestParameter, dynamicContext);

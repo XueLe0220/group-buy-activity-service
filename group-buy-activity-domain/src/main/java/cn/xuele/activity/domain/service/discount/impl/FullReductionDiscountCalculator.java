@@ -30,12 +30,12 @@ public class FullReductionDiscountCalculator extends AbstractDiscountCalculateSe
             return originalPrice;
         }
 
-        BigDecimal payPrice = originalPrice.subtract(discountAmount);
-        if (payPrice.compareTo(BigDecimal.ZERO) <= 0) {
+        BigDecimal payableAmount = originalPrice.subtract(discountAmount);
+        if (payableAmount.compareTo(BigDecimal.ZERO) <= 0) {
             return new BigDecimal("0.01");
         }
 
-        return payPrice;
+        return payableAmount;
     }
 
     @Override

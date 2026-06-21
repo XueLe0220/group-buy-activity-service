@@ -22,13 +22,13 @@ public class DirectReductionDiscountCalculator extends AbstractDiscountCalculate
         BigDecimal deductionAmount = new BigDecimal(groupBuyDiscount.getMarketExpr().trim());
 
         // 2. 计算：原价 - 扣减金额
-        BigDecimal payPrice = originalPrice.subtract(deductionAmount);
+        BigDecimal payableAmount = originalPrice.subtract(deductionAmount);
 
         // 3. 兜底检验
-        if (payPrice.compareTo(BigDecimal.ZERO) <= 0) {
+        if (payableAmount.compareTo(BigDecimal.ZERO) <= 0) {
             return new BigDecimal("0.01");
         }
-        return payPrice;
+        return payableAmount;
     }
 
 

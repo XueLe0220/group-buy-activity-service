@@ -63,7 +63,7 @@ public class ActivityTrialProvider implements IActivityTrialService {
                     .goodsName(trialBalanceEntity.getGoodsName())
                     .originalPrice(trialBalanceEntity.getOriginalPrice())
                     .deductionPrice(trialBalanceEntity.getDeductionPrice())
-                    .payPrice(trialBalanceEntity.getPayPrice())
+                    .payableAmount(trialBalanceEntity.getPayableAmount())
                     .targetCount(trialBalanceEntity.getTargetCount())
                     .validTime(trialBalanceEntity.getValidTime())
                     .takeLimitCount(trialBalanceEntity.getTakeLimitCount())

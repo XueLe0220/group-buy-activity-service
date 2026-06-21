@@ -33,7 +33,7 @@ public class EndNode extends AbstractActivityTrialSupport {
                 .goodsName(sku.getGoodsName())
                 .originalPrice(sku.getOriginalPrice())
                 .deductionPrice(dynamicContext.getDeductionPrice())
-                .payPrice(dynamicContext.getPayPrice())
+                .payableAmount(dynamicContext.getPayableAmount())
                 .targetCount(activityDiscount.getTarget())
                 .validTime(activityDiscount.getValidTime())
                 .takeLimitCount(activityDiscount.getTakeLimitCount())
